@@ -35,3 +35,13 @@ Imprima la lista de configuración, la solicitud, su costo y la configuración d
 Imprima la lista de configuración, la solicitud, su costo y la configuración de la lista aplicando MTF por cada secuencia de solicitudes y al final el costo total de acceso, Si se hiciera la secuencia de solicitudes 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 , ¿cuál es el costo total de acceso? ¿Se observa algún patrón cuando hay una repetición de 16 elementos en la secuencia?
 
 6. Se plantea un algoritmo mejorado de MTF: IMTF por Rakesh Mohanty y Sasmita Tripathy, basado en el concepto de mirada hacia adelante (look-ahead), en el cual, después de acceder al elemento de la posición 𝑖 en la lista de configuración, se mueve el elemento al frente de la lista si y sólo si este elemento está en los próximos 𝑖−1 elementos del elemento accedido en la solicitud de secuencia. En caso contrario, el elemento accedido no se mueve al frente de la lista de configuración. Imprima la lista de configuración, la solicitud, su costo y la configuración de la lista aplicando IMTF por cada solicitud en la secuencia. Al final, imprima el costo total de acceso usando IMTF para el mejor y el peor de los casos de MTF.
+
+### Como ejecutar el codigo:
+
+Correr el archivo [proyecto-2.py](proyecto-2.py) en la linea de comandos:
+
+```
+python proyecto-2.py
+```
+
+o desde cualquier IDE.
