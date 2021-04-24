@@ -40,7 +40,6 @@ def ImprovedMove2front(strng, symboltable):
         print("Solicitud: ", char)
         indx = pad.index(char) # Encuentra el indice de la solicitud en la lista de configracion
         sequence.append(indx) # Lo agrega a la secuencia
-        consto_unitario = 0
         nueva_lista = np.array(list(strng))
         try:
             nueva_lista = nueva_lista[contador+1:(contador+indx)]
@@ -50,7 +49,7 @@ def ImprovedMove2front(strng, symboltable):
         print("Nueva lista: ", nueva_lista)
         if char in nueva_lista:
             pad = [pad.pop(indx)] + pad # Modifica la lista de configuracion
-            consto_unitario = indx + 1
+        consto_unitario = indx + 1
         consto_total += consto_unitario 
         print("Configuracion de la Lista  (Luego a Solicitud): ", pad)
         print("Costo Unitario: ", consto_unitario)
@@ -97,11 +96,13 @@ if __name__ == '__main__':
     print("\nLa secuencia de solicitudes ", secuencia_de_solicitudes, " devuelve la secuencia ", encode, "\n")
 
     # f)
+    # Mejor de los casos
     secuencia_de_solicitudes = "00000000000000000000"
     print("\nSecuancia de solicitudes: ", secuencia_de_solicitudes)
     encode = ImprovedMove2front(secuencia_de_solicitudes, SYMBOLTABLE)
     print("\nLa secuencia de solicitudes ", secuencia_de_solicitudes, " devuelve la secuencia ", encode, "\n")
 
+    # Peor de los casos
     secuencia_de_solicitudes = "43210432104321043210"
     print("\nSecuancia de solicitudes: ", secuencia_de_solicitudes)
     encode = ImprovedMove2front(secuencia_de_solicitudes, SYMBOLTABLE)
